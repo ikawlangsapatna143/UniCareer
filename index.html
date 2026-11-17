@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UniCareer - Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div>
+        <h1>UniCareer</h1>
+        <small>University Career Profiling Portal</small>
+    </div>
+    <span class="badge">Student Portal</span>
+</header>
+
+<main>
+    <div class="intro">
+        <h2>Create Your Career Profile</h2>
+        <p>Build your professional profile and discover opportunities for your future career.</p>
+    </div>
+
+    <div class="progress">
+        <div class="top">
+            <span>Registration Form</span>
+            <span id="stepText">Step 1 of 5</span>
+        </div>
+        <div class="bar">
+            <span id="progressBar"></span>
+        </div>
+    </div>
+
+    <form id="regForm" novalidate>
+
+        <section class="section step active">
+            <h3><span class="num">1</span>Personal Information</h3>
+            <p class="sub">Enter your basic personal details.</p>
+
+            <div class="grid">
+                <label class="field">First Name *
+                    <input type="text" name="first_name" required>
+                </label>
+
+                <label class="field">Last Name *
+                    <input type="text" name="last_name" required>
+                </label>
+
+                <label class="field">Middle Name
+                    <input type="text" name="middle_name">
+                </label>
+
+                <label class="field">Date of Birth *
+                    <input type="date" name="birth_date" required>
+                </label>
+
+                <label class="field">Gender *
+                    <select name="gender" required>
+                        <option value="">Select gender</option>
+                        <option>Female</option>
+                        <option>Male</option>
+                        <option>Prefer not to say</option>
+                    </select>
+                </label>
+
+                <label class="field">Contact Number *
+                    <input type="tel" name="contact" placeholder="09XXXXXXXXX" required>
+                </label>
+            </div>
+
+            <label class="field">Email Address *
+                <input type="email" name="email" required>
+            </label>
+
+            <label class="field">Complete Address *
+                <textarea name="address" required></textarea>
+            </label>
+        </section>
+
+        <section class="section step">
+            <h3><span class="num">2</span>Academic Information</h3>
+            <p class="sub">Tell us about your studies.</p>
+
+            <div class="grid">
+                <label class="field">Student Number *
+                    <input type="text" name="student_no" required>
+                </label>
+
+                <label class="field">College / Department *
+                    <select name="college" id="college" required>
+                        <option value="">Select college</option>
+                        <option>College of Information Technology</option>
+                        <option>College of Engineering</option>
+                        <option>College of Business and Accountancy</option>
+                        <option>College of Education</option>
+                        <option>College of Arts and Sciences</option>
+                        <option>College of Nursing and Allied Health</option>
+                        <option>College of Hospitality and Tourism Management</option>
+                    </select>
+                </label>
+
+                <label class="field">Course / Program *
+                    <select name="course" id="course" required disabled>
+                        <option value="">Select a college first</option>
+                    </select>
+                </label>
+
+                <label class="field">Year Level *
+                    <select name="year_level" required>
+                        <option value="">Select year</option>
+                        <option>1st Year</option>
+                        <option>2nd Year</option>
+                        <option>3rd Year</option>
+                        <option>4th Year</option>
+                    </select>
+                </label>
+
+                <label class="field">Expected Graduation *
+                    <input type="month" name="graduation" required>
+                </label>
+
+                <label class="field">GWA *
+                    <input type="number" name="gwa" min="1" max="5" step="0.01" required>
+                </label>
+            </div>
+        </section>
+
+        <section class="section step">
+            <h3><span class="num">3</span>Professional Information</h3>
+            <p class="sub">Highlight your skills and experience.</p>
+
+            <label class="field">Career Objective *
+                <textarea name="objective" required></textarea>
+            </label>
+
+            <div class="grid">
+                <label class="field">Technical Skills *
+                    <textarea name="tech_skills" required></textarea>
+                    <span class="hint">Separate skills with commas.</span>
+                </label>
+
+                <label class="field">Soft Skills
+                    <textarea name="soft_skills"></textarea>
+                </label>
+
+                <label class="field">Work Experience
+                    <textarea name="work_exp"></textarea>
+                </label>
+
+                <label class="field">Internship / OJT Experience
+                    <textarea name="ojt_exp"></textarea>
+                </label>
+            </div>
+
+            <label class="field">Certifications and Trainings
+                <textarea name="certifications"></textarea>
+            </label>
+        </section>
+
+        <section class="section step">
+            <h3><span class="num">4</span>Employment Preferences</h3>
+            <p class="sub">What kind of role are you looking for?</p>
+
+            <div class="grid">
+                <label class="field">Preferred Job Position *
+                    <input type="text" name="job_position" required>
+                </label>
+
+                <label class="field">Preferred Industry *
+                    <select name="industry" required>
+                        <option value="">Select industry</option>
+                        <option>Information Technology / Software</option>
+                        <option>Business Process Outsourcing (BPO)</option>
+                        <option>Banking and Finance</option>
+                        <option>Engineering and Construction</option>
+                        <option>Manufacturing</option>
+                        <option>Education and Training</option>
+                        <option>Healthcare</option>
+                        <option>Hospitality and Tourism</option>
+                        <option>Retail and E-commerce</option>
+                        <option>Government and Public Service</option>
+                        <option>Marketing and Advertising</option>
+                        <option>Telecommunications</option>
+                        <option>Other</option>
+                    </select>
+                </label>
+
+                <label class="field">Preferred Work Location *
+                    <input type="text" name="work_location" required>
+                </label>
+
+                <label class="field">Expected Salary (Optional)
+                    <input type="number" name="salary" min="0">
+                </label>
+            </div>
+
+            <strong>Employment Type *</strong>
+            <div class="types">
+                <label><input type="checkbox" name="emp_type[]" value="Full-time"> Full-time</label>
+                <label><input type="checkbox" name="emp_type[]" value="Part-time"> Part-time</label>
+                <label><input type="checkbox" name="emp_type[]" value="Internship"> Internship</label>
+            </div>
+            <div id="employmentError"></div>
+        </section>
+
+        <section class="section step">
+            <h3><span class="num">5</span>Account Information</h3>
+            <p class="sub">Create your login credentials.</p>
+
+            <label class="field">Username *
+                <input type="text" name="username" required>
+            </label>
+
+            <div class="grid">
+                <label class="field">Password *
+                    <input type="password" name="password" required>
+                    <span class="hint">At least 8 characters, with uppercase, lowercase, and a number.</span>
+                </label>
+
+                <label class="field">Confirm Password *
+                    <input type="password" name="confirm_password" required>
+                </label>
+            </div>
+
+            <label class="check">
+                <input type="checkbox" name="accurate" required>
+                I confirm that the information I provided is accurate and complete.
+            </label>
+
+            <label class="check">
+                <input type="checkbox" name="privacy" required>
+                I acknowledge the university's privacy notice and consent to the processing of my personal information for the stated career services purposes.
+            </label>
+        </section>
+
+        <div id="summary" class="summary" role="alert"></div>
+        <div id="success" class="success" role="status"></div>
+
+        <div class="actions">
+            <button type="button" id="prevBtn" disabled>Previous</button>
+
+            <div>
+                <button type="button" id="saveBtn">Save Draft</button>
+                <button type="button" id="nextBtn" class="primary">Next Step</button>
+                <button type="submit" id="submitBtn" class="submit" hidden>Submit Registration</button>
+            </div>
+        </div>
+
+
+    </form>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
